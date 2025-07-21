@@ -7,9 +7,11 @@
 </head>
 <body>
 
+  <!-- Logo -->
+  <img src="/asserts/foto/fotopadaria.png" alt="logo imagem padaria fantasia" width="300" height="300">
+
   <!-- Cabeçalho da página -->
   <header>
-
     <!-- Apresentação da padaria -->
     <div>
       <h1>Padaria Fantasia</h1>
@@ -47,6 +49,13 @@
           Aqui no bairro, somos mais que uma padaria: somos ponto de encontro, aconchego e boas lembranças.
           Na Padaria Fantasia, cada cliente é recebido com carinho.
         </p>
+
+        <section id="video-sobrenos">
+          <video width="640" height="360" controls autoplay muted loop>
+            <source src="/asserts/video/videopadaria.mp4" type="video/mp4">
+            Seu navegador não suporta o vídeo.
+          </video>
+        </section>
       </div>
     </section>
 
@@ -60,15 +69,56 @@
         </p>
       </div>
 
-      <div>
-        <ul>
-          <li>🥖 Pão francês</li>
-          <li>🍰 Pão de açúcar</li>
-          <li>🥐 Croissant</li>
-          <li>🍫 Bolo de chocolate</li>
-          <li>🍗 Torta de frango</li>
-        </ul>
-      </div>
+      <section id="cardapio">
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Categoria</th>
+              <th>Produto</th>
+              <th>Descrição</th>
+              <th>Preço</th>
+              <th>Foto</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Pão</td>
+              <td>Pão francês</td>
+              <td>O pão francês, também conhecido como pão de sal, é um tipo de pão pequeno e cilíndrico, popular no Brasil.</td>
+              <td>R$1,00</td>
+              <td><img src="/asserts/foto/paofrances.jpg" alt="pão francês" width="300" height="200"></td>
+            </tr>
+            <tr>
+              <td>Torta</td>
+              <td>Torta de Frango</td>
+              <td>Massa leve com recheio de creme de frango delicioso.</td>
+              <td>R$20,00</td>
+              <td><img src="/asserts/foto/tortadefrango.jpg" alt="torta de frango" width="300" height="200"></td>
+            </tr>
+            <tr>
+              <td>Doce</td>
+              <td>Bolo de chocolate</td>
+              <td>Bolo com massa de chocolate e cobertura cremosa.</td>
+              <td>R$5,00 (fatia)</td>
+              <td><img src="/asserts/foto/bolodechocolate.avif" alt="bolo de chocolate" width="300" height="200"></td>
+            </tr>
+            <tr>
+              <td>Café</td>
+              <td>Café com leite</td>
+              <td>Tradicional pingado.</td>
+              <td>R$2,00</td>
+              <td><img src="/asserts/foto/cafecomleite.jpeg" alt="café com leite" width="300" height="200"></td>
+            </tr>
+            <tr>
+              <td>Suco</td>
+              <td>Suco de Laranja</td>
+              <td>Suco de laranja natural.</td>
+              <td>R$4,00</td>
+              <td><img src="/asserts/foto/sucodelaranja.png" alt="suco de laranja" width="300" height="200"></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
     </section>
 
     <!-- Bloco 3: Diferenciais -->
@@ -77,32 +127,54 @@
         <h2>Diferenciais</h2>
         <ol>
           <li><strong>Atendimento acolhedor:</strong> Equipe simpática e pronta para atender com atenção e respeito.</li>
-          <li><strong>Cardápio variado:</strong> Pães artesanais, doces, salgados, cafés e lanches para todos os gostos.</li>
-          <li><strong>Qualidade nos ingredientes:</strong> Matérias-primas frescas e selecionadas em todas as receitas.</li>
-          <li><strong>Ambiente familiar:</strong> Um espaço acolhedor e tradicional no coração do bairro.</li>
-          <li><strong>Tradição e inovação:</strong> Receitas clássicas com toques modernos e novidades frequentes.</li>
+          <li><strong>Cardápio variado:</strong> Pães, doces, salgados, cafés e lanches para todos os gostos.</li>
+          <li><strong>Qualidade nos ingredientes:</strong> Matérias-primas frescas e selecionadas.</li>
+          <li><strong>Ambiente familiar:</strong> Espaço acolhedor e tradicional.</li>
+          <li><strong>Tradição e inovação:</strong> Receitas clássicas com toques modernos.</li>
         </ol>
       </div>
+
+      <section id="video-diferenciais">
+        <iframe width="600" height="300" src="https://www.youtube.com/embed/C1sks8ZKuL0" title="Coffee Bean Footage Video in 4K" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </section>
     </section>
 
     <!-- Bloco 4: Localização e Horários -->
     <section id="LocalizacaoHorarios">
       <div>
-        <h3>Localização e Horários</h3>
+        <h3>Localização</h3>
+        <img src="/asserts/foto/foto de frente padaria.png" alt="foto da frente da padaria" width="300" height="300">
         <ul>
           <li><strong>Endereço:</strong> Rua das Flores, 123 – Bairro Jardim Alegre</li>
           <li><strong>Telefone:</strong> <a href="tel:+5511999998888">(11) 99999-8888</a></li>
         </ul>
       </div>
 
-      <div>
-        <h3><strong>Horário de funcionamento:</strong></h3>
-        <ul>
-          <li>🕕 Segunda a Sexta: 6h às 19h</li>
-          <li>🕕 Sábado: 6h às 18h</li>
-          <li>🕖 Domingo: 7h às 12h</li>
-        </ul>
-      </div>
+      <section id="horario">
+        <h3><strong>Horário de Funcionamento</strong></h3>
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Dia</th>
+              <th>Horário</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Segunda a Sexta</td>
+              <td>6h às 19h</td>
+            </tr>
+            <tr>
+              <td>Sábado</td>
+              <td>6h às 18h</td>
+            </tr>
+            <tr>
+              <td>Domingo</td>
+              <td>7h às 12h</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
     </section>
 
   </main>

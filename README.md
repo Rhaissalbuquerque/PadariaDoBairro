@@ -13,7 +13,16 @@ uma padaria fictícia chamada **Padaria Fantasia**.
 ## 🧱 Estrutura do Projeto
 
 O projeto será construído em etapas durante as aulas:
-1. **HTML**: Estrutura básica da página, com seções como "Sobre Nós", "Produtos", "Diferenciais" e "Localização".
+1. **HTML**: Estrutura básica da página, com seções como "Sobre Nós", "Produtos", "Diferenciais" ,"Localização".
+
+Este projeto permite praticar:
+
+- Estruturação semântica com HTML5
+- Organização de conteúdo em seções
+- Uso de imagens e vídeos locais e externos
+- Tabelas com dados organizados
+- Ancoragem de links internos com IDs
+
 2. **CSS**: Estilização visual da página com foco em cores, tipografia e responsividade.
 3. **JavaScript**: Interações e funcionalidades dinâmicas (em etapas futuras).
 
@@ -43,4 +52,4 @@ foco no aprendizado gradual e prático dos alunos.
 
 ## 📅 Última atualização
 
-18 de julho de 2025
+21 de julho de 2025
