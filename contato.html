@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+</head>
+<body>
+
+    <!-- Link para voltar à página inicial -->
+    <p><a href="/index.html">← Voltar para a Página Inicial</a></p>
+
+    <h1>Entrar em contato com a Padaria</h1>
+    <p>Campos obrigatórios*</p>
+
+    <form action="#" method="post">
+        
+        <!-- Dados de contato -->
+        <fieldset>
+            <legend><strong>Informações de Contato</strong></legend>
+
+            <!-- Nome completo -->
+            <label for="nome">Nome completo*:</label><br>
+            <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo"><br><br>
+        
+            <!-- E-mail -->
+            <label for="email">E-mail*:</label><br>
+            <input type="email" id="email" name="email" required placeholder="exemplo@email.com"><br><br>
+
+            <!-- Telefone -->
+            <label for="telefone">Telefone:</label><br>
+            <input type="tel" id="telefone" name="telefone" placeholder="(11) 90000-0000" pattern="\(\d{2}\)\s\d{4,5}-\d{4}"><br><br>
+        </fieldset>
+
+        <br>
+
+        <!-- Detalhes da mensagem -->
+        <fieldset>
+            <legend><strong>Mensagem</strong></legend>
+
+            <!-- Assunto -->
+            <label for="assunto">Assunto*:</label><br>
+            <select id="assunto" name="assunto" required>
+              <option value="" disabled selected>Selecione um assunto</option>
+              <option value="sugestao">Sugestão</option>
+              <option value="reclamacao">Reclamação</option>
+              <option value="elogio">Elogio</option>
+              <option value="outro">Outro</option>
+            </select><br><br>
+        
+            <!-- Mensagem -->
+            <label for="mensagem">Mensagem*:</label><br>
+            <textarea id="mensagem" name="mensagem" required minlength="10" placeholder="Escreva sua mensagem aqui..."></textarea><br><br>
+        </fieldset>
+
+        <br>
+
+        <!-- Botão de envio -->
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>

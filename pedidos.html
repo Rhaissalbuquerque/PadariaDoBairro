@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedido Especial</title>
+</head>
+<body>
+  <h1>Formulário de Pedidos Especiais</h1>
+  <p>Preencha o formulário abaixo para personalizar seu pedido.</p>
+
+  <form action="#" method="post">
+
+    <!-- Seção 1 - Dados do Cliente -->
+    <fieldset>
+      <legend><strong>Seção 1 - Dados do Cliente</strong></legend>
+
+      <label for="nome">Nome completo:</label><br>
+      <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo"><br><br>
+
+      <label for="telefone">Telefone:</label><br>
+      <input 
+        type="tel" 
+        id="telefone" 
+        name="telefone" 
+        required 
+        placeholder="(11) 90000-0000" 
+        pattern="\(\d{2}\)\s\d{4,5}-\d{4}"
+      ><br><br>
+
+      <label for="email">E-mail:</label><br>
+      <input type="email" id="email" name="email" required placeholder="exemplo@email.com"><br><br>
+    </fieldset>
+
+    <br>
+
+    <!-- Seção 2 - Detalhes do Pedido -->
+    <fieldset>
+      <legend><strong>Seção 2 - Detalhes do Pedido</strong></legend>
+
+      <p>Tipo de produto:</p>
+      <input type="radio" id="bolo" name="tipo_produto" value="Bolo" required>
+      <label for="bolo">Bolo</label><br>
+
+      <input type="radio" id="torta" name="tipo_produto" value="Torta">
+      <label for="torta">Torta</label><br>
+
+      <input type="radio" id="salgados" name="tipo_produto" value="Salgados">
+      <label for="salgados">Salgados</label><br><br>
+
+      <label for="sabor">Sabor/Recheio:</label><br>
+      <select id="sabor" name="sabor" required>
+        <option value="" disabled selected>Selecione um sabor</option>
+        <option value="chocolate">Chocolate</option>
+        <option value="morango">Morango</option>
+        <option value="baunilha">Baunilha</option>
+        <option value="doce_de_leite">Doce de leite</option>
+        <option value="outro">Outro</option>
+      </select><br><br>
+
+      <p>Tamanho:</p>
+      <input type="radio" id="pequeno" name="tamanho" value="Pequeno" required>
+      <label for="pequeno">Pequeno</label><br>
+
+      <input type="radio" id="medio" name="tamanho" value="Médio">
+      <label for="medio">Médio</label><br>
+
+      <input type="radio" id="grande" name="tamanho" value="Grande">
+      <label for="grande">Grande</label><br><br>
+
+      <label for="data_entrega">Data de entrega:</label><br>
+      <input type="date" id="data_entrega" name="data_entrega" required><br><br>
+    </fieldset>
+
+    <br>
+
+    <!-- Seção 3 - Informações Adicionais -->
+    <fieldset>
+      <legend><strong>Seção 3 - Informações Adicionais</strong></legend>
+
+      <label for="orcamento">Qual é o orçamento máximo que você deseja pagar (R$)?</label><br>
+      <input 
+        type="number" 
+        id="orcamento" 
+        name="orcamento" 
+        min="0" 
+        step="0.01" 
+        placeholder="Ex: R$250.00"
+      ><br><br>
+
+      <label for="observacoes">Observações especiais:</label><br>
+      <textarea 
+        id="observacoes" 
+        name="observacoes" 
+        placeholder="Descreva alguma preferência ou detalhe adicional..."
+      ></textarea><br><br>
+    </fieldset>
+
+    <br>
+
+    <button type="submit">Enviar Pedido</button>
+  </form>
+</body>
+</html>

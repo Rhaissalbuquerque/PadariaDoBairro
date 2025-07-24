@@ -13,36 +13,49 @@ uma padaria fictícia chamada **Padaria Fantasia**.
 ## 🧱 Estrutura do Projeto
 
 O projeto será construído em etapas durante as aulas:
-1. **HTML**: Estrutura básica da página, com seções como "Sobre Nós", "Produtos", "Diferenciais" ,"Localização".
+
+1. **HTML**: Estrutura básica da página, com seções como "Sobre Nós", "Produtos", "Diferenciais", "Localização".
 
 Este projeto permite praticar:
 
-- Estruturação semântica com HTML5
-- Organização de conteúdo em seções
-- Uso de imagens e vídeos locais e externos
-- Tabelas com dados organizados
-- Ancoragem de links internos com IDs
+- Estruturação semântica com HTML5  
+- Organização de conteúdo em seções  
+- Uso de imagens e vídeos locais e externos  
+- Tabelas com dados organizados  
+- Ancoragem de links internos com IDs  
 
-2. **CSS**: Estilização visual da página com foco em cores, tipografia e responsividade.
+2. **CSS**: Estilização visual da página com foco em cores, tipografia e responsividade.  
 3. **JavaScript**: Interações e funcionalidades dinâmicas (em etapas futuras).
 
-## ✨ Conteúdo do Site
+## ✨ Funcionalidades Desenvolvidas
 
-- Apresentação institucional da padaria
-- Lista de produtos como pães, bolos e tortas
-- Diferenciais como atendimento acolhedor e ingredientes frescos
-- Informações de contato e horários de funcionamento
+Além das páginas informativas, o projeto conta com funcionalidades práticas:
+
+- 📋 Formulário de **cadastro de clientes**
+- 🧁 Formulário para realizar **pedidos personalizados**
+- 💬 Página para **coletar feedbacks dos clientes**
+- 📇 Criação de uma **lista de contatos** com base nos envios dos formulários
+
+Esses recursos simulam o funcionamento real de uma padaria moderna, promovendo a prática de formulários, validações e organização de dados.
+
+## 📄 Conteúdo do Site
+
+- Apresentação institucional da padaria  
+- Lista de produtos como pães, bolos e tortas  
+- Diferenciais como atendimento acolhedor e ingredientes frescos  
+- Formulários de contato, pedidos e feedback  
+- Informações de contato e horários de funcionamento  
 
 ## 💡 Tecnologias Utilizadas
 
-- HTML5 (estrutura)
-- CSS3 (em etapas futuras)
-- JavaScript (em etapas futuras)
+- HTML5 (estrutura)  
+- CSS3 (em etapas futuras)  
+- JavaScript (em etapas futuras)  
 
 ## 🛠️ Como usar
 
-1. Clone ou baixe este repositório.
-2. Abra o arquivo `index.html` em um navegador.
+1. Clone ou baixe este repositório.  
+2. Abra o arquivo `index.html` em um navegador.  
 3. Acompanhe as próximas aulas para evoluir o projeto com CSS e JS.
 
 ## 📌 Observações
@@ -52,4 +65,4 @@ foco no aprendizado gradual e prático dos alunos.
 
 ## 📅 Última atualização
 
-21 de julho de 2025
+23 de julho de 2025

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro</title>
+</head>
+<body>
+    
+  <h1>Cadastro na Newsletter</h1>
+  <form>
+    
+    <fieldset>
+      <legend>Dados Pessoais</legend>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome"  required placeholder="Digite seu nome"><br><br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required equired placeholder="Digite seu email"><br><br>
+
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" name="telefone" required placeholder="(11) 91000-0000" pattern="[0-9]{10,11}"><br><br>
+
+      <label for="nascimento">Data de nascimento:</label>
+      <input type="date" id="nascimento" name="nascimento" equired placeholder="Digite a sua data de nascimento">
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>Endereço</legend>
+      <label for="rua">Rua:</label>
+      <input type="text" id="rua" name="rua" required  placeholder="Digite o nome da sua rua"><br><br>
+
+      <label for="numero">Número:</label>
+      <input type="number" id="numero" name="numero" required placeholder="Digite o número da sua rua" ><br><br>
+
+      <label for="bairro">Bairro:</label>
+      <input type="text" id="bairro" name="bairro" required placeholder="Digite o nome do seu bairro"><br><br>
+
+      <label for="cep">CEP:</label>
+      <input type="text" id="cep" name="cep" required pattern="[0-9]{5}-[0-9]{3}" placeholder="Digite o cep da sua rua">
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>Preferências</legend>
+      <label><input type="checkbox" name="preferencias" value="pães"> Pães</label><br>
+      <label><input type="checkbox" name="preferencias" value="bolos"> Bolos</label><br>
+      <label><input type="checkbox" name="preferencias" value="tortas"> Tortas</label><br>
+      <label><input type="checkbox" name="preferencias" value="salgados"> Salgados</label>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>Termos</legend>
+      <label><input type="checkbox" name="promoções" required> Aceito receber promoções</label><br><br>
+      <label><input type="checkbox" name="termos" required> Aceito os termos de uso</label>
+    </fieldset>
+
+    <br>
+
+    <button type="submit">Enviar Cadastro</button>
+
+  </form>
+</body>
+</html>
