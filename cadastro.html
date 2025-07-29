@@ -2,11 +2,14 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="asserts/style.css">
   <title>Cadastro</title>
 </head>
 <body>
-    
+   
+  <div class="formulario-geral" >
   <h1>Cadastro na Newsletter</h1>
+  <br>
   <form>
     
     <fieldset>
@@ -22,6 +25,7 @@
 
       <label for="nascimento">Data de nascimento:</label>
       <input type="date" id="nascimento" name="nascimento" equired placeholder="Digite a sua data de nascimento">
+
     </fieldset>
 
     <br>
@@ -43,26 +47,55 @@
 
     <br>
 
-    <fieldset>
-      <legend>Preferências</legend>
-      <label><input type="checkbox" name="preferencias" value="pães"> Pães</label><br>
-      <label><input type="checkbox" name="preferencias" value="bolos"> Bolos</label><br>
-      <label><input type="checkbox" name="preferencias" value="tortas"> Tortas</label><br>
-      <label><input type="checkbox" name="preferencias" value="salgados"> Salgados</label>
-    </fieldset>
+    <div class="form-group">
+      <fieldset>
+        <legend>Preferências</legend>
+    
+        <label>
+          <input type="checkbox" name="preferencias" value="pães">
+          Pães
+        </label><br>
+    
+        <label>
+          <input type="checkbox" name="preferencias" value="bolos">
+          Bolos
+        </label><br>
+    
+        <label>
+          <input type="checkbox" name="preferencias" value="tortas">
+          Tortas
+        </label><br>
+    
+        <label>
+          <input type="checkbox" name="preferencias" value="salgados">
+          Salgados
+        </label>
+      </fieldset>
+    </div>
+    
+    <br>
+    
+    <div class="form-group">
+      <fieldset>
+        <legend>Termos</legend>
+    
+        <label>
+          <input type="checkbox" name="promocoes">
+          Aceito receber promoções
+        </label><br><br>
+    
+        <label>
+          <input type="checkbox" name="termos" required>
+          Aceito os termos de uso
+        </label>
+      </fieldset>
+    </div>
 
     <br>
 
-    <fieldset>
-      <legend>Termos</legend>
-      <label><input type="checkbox" name="promoções" required> Aceito receber promoções</label><br><br>
-      <label><input type="checkbox" name="termos" required> Aceito os termos de uso</label>
-    </fieldset>
-
-    <br>
-
-    <button type="submit">Enviar Cadastro</button>
-
+   <button type="submit" class="btn-enviar">Enviar Feedback</button>
+  <button type="reset" class="btn-apagar">Apagar</button>
   </form>
+</div>  
 </body>
 </html>

@@ -3,9 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/asserts/style.css">
   <title>Pedido Especial</title>
 </head>
 <body>
+
+  <div class="formulario-geral">
   <h1>Formulário de Pedidos Especiais</h1>
   <p>Preencha o formulário abaixo para personalizar seu pedido.</p>
 
@@ -30,24 +33,33 @@
 
       <label for="email">E-mail:</label><br>
       <input type="email" id="email" name="email" required placeholder="exemplo@email.com"><br><br>
+      
     </fieldset>
 
     <br>
 
     <!-- Seção 2 - Detalhes do Pedido -->
-    <fieldset>
+    <fieldset class="form-group">
       <legend><strong>Seção 2 - Detalhes do Pedido</strong></legend>
-
-      <p>Tipo de produto:</p>
-      <input type="radio" id="bolo" name="tipo_produto" value="Bolo" required>
-      <label for="bolo">Bolo</label><br>
-
-      <input type="radio" id="torta" name="tipo_produto" value="Torta">
-      <label for="torta">Torta</label><br>
-
-      <input type="radio" id="salgados" name="tipo_produto" value="Salgados">
-      <label for="salgados">Salgados</label><br><br>
-
+    
+      <div class="radio-group">
+        <p>Tipo de produto:</p>
+        <label>
+          <input type="radio" name="tipo_produto" value="Bolo" required>
+          Bolo
+        </label><br>
+        <label>
+          <input type="radio" name="tipo_produto" value="Torta">
+          Torta
+        </label><br>
+        <label>
+          <input type="radio" name="tipo_produto" value="Salgados">
+          Salgados
+        </label>
+      </div>
+    
+      <br>
+    
       <label for="sabor">Sabor/Recheio:</label><br>
       <select id="sabor" name="sabor" required>
         <option value="" disabled selected>Selecione um sabor</option>
@@ -56,21 +68,32 @@
         <option value="baunilha">Baunilha</option>
         <option value="doce_de_leite">Doce de leite</option>
         <option value="outro">Outro</option>
-      </select><br><br>
-
-      <p>Tamanho:</p>
-      <input type="radio" id="pequeno" name="tamanho" value="Pequeno" required>
-      <label for="pequeno">Pequeno</label><br>
-
-      <input type="radio" id="medio" name="tamanho" value="Médio">
-      <label for="medio">Médio</label><br>
-
-      <input type="radio" id="grande" name="tamanho" value="Grande">
-      <label for="grande">Grande</label><br><br>
-
+      </select>
+    
+      <br><br>
+    
+      <div class="radio-group">
+        <p>Tamanho:</p>
+        <label>
+          <input type="radio" name="tamanho" value="Pequeno" required>
+          Pequeno
+        </label><br>
+        <label>
+          <input type="radio" name="tamanho" value="Médio">
+          Médio
+        </label><br>
+        <label>
+          <input type="radio" name="tamanho" value="Grande">
+          Grande
+        </label>
+      </div>
+    
+      <br>
+    
       <label for="data_entrega">Data de entrega:</label><br>
-      <input type="date" id="data_entrega" name="data_entrega" required><br><br>
+      <input type="date" id="data_entrega" name="data_entrega" required>
     </fieldset>
+    
 
     <br>
 
@@ -98,7 +121,9 @@
 
     <br>
 
-    <button type="submit">Enviar Pedido</button>
+    <button type="submit"class="btn-enviar" >Enviar Pedido</button>
+    <button type="reset" class="btn-apagar">Apagar</button>
   </form>
+</div>
 </body>
 </html>

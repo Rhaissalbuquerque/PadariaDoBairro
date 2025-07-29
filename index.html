@@ -3,29 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/asserts/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   <title>Padaria Fantasia</title>
 </head>
 <body>
 
-  <!-- Logo -->
-  <img src="/asserts/foto/fotopadaria.png" alt="logo imagem padaria fantasia" width="300" height="300">
-
-  <!-- link navegação -->
-  <nav>
-    <ul>
-      <li><a href="/contato.html" target="_blank">Contato</a></li>
-      <li><a href="/pedidos.html" target="_blank">Pedidos</a></li>
-      <li><a href="/feedback.html" target="_blank">Feed Back</a></li>
-      <li><a href="/cadastro.html" target="_blank">Cadastro</a></li>
-    </ul>
-  </nav>
+  <div class="cabecalho-principal">
+    <!-- Logo -->
+    <img src="/asserts/foto/fotopadaria.png" alt="logo imagem padaria fantasia" width="120" height="120">
   
+    <!-- Menu -->
+    <nav>
+      <ul class="menu">
+        <li><a href="/contato.html" target="_blank">Contato</a></li>
+        <li><a href="/pedidos.html" target="_blank">Pedidos</a></li>
+        <li><a href="/depoimentos.html" target="_blank">Depoimentos</a></li>
+        <li><a href="/cadastro.html" target="_blank">Cadastro</a></li>
+      </ul>
+    </nav>
+  </div>
 
   <!-- Cabeçalho da página -->
   <header>
     <!-- Apresentação da padaria -->
     <div>
-      <h1>Padaria Fantasia</h1>
+      <h1 class="fonte-principal">Padaria Fantasia</h1>
       <p>
         Já passou na nossa padaria para levar alguns produtos saborosos para casa?
         Então corre lá e não deixe de aproveitar os nossos produtos de fabricação própria.
@@ -50,7 +55,7 @@
     <!-- Bloco 1: Sobre Nós -->
     <section id="SobreNos">
       <div>
-        <h2>Sobre Nós</h2>
+        <h2 class="fonte-secundaria">Sobre Nós</h2>
         <p>
           A Padaria Fantasia é tradição e sabor no coração do bairro.  
           Desde o ano 2000, somos uma padaria familiar que valoriza a qualidade, o bom atendimento e a variedade.
@@ -73,15 +78,15 @@
     <!-- Bloco 2: Nossos Produtos -->
     <section id="NossosProdutos">
       <div>
-        <h2>Nossos Produtos</h2>
+        <h2 class="fonte-secundaria">Nossos Produtos</h2>
         <p>
           Nossa vitrine é recheada de pães artesanais, como o francês crocante, o integral macio e o famoso pão de milho da casa.
           Temos também uma linha irresistível de salgados, tortas, lanches e bolos caseiros, perfeitos para qualquer hora do dia.
         </p>
       </div>
 
-      <section id="cardapio">
-        <table border="1">
+      <section>
+        <table border="1" class="cardapio">
           <thead>
             <tr>
               <th>Categoria</th>
@@ -135,7 +140,7 @@
     <!-- Bloco 3: Diferenciais -->
     <section id="Diferenciais">
       <div>
-        <h2>Diferenciais</h2>
+        <h2 class="fonte-secundaria">Diferenciais</h2>
         <ol>
           <li><strong>Atendimento acolhedor:</strong> Equipe simpática e pronta para atender com atenção e respeito.</li>
           <li><strong>Cardápio variado:</strong> Pães, doces, salgados, cafés e lanches para todos os gostos.</li>
@@ -153,7 +158,7 @@
     <!-- Bloco 4: Localização e Horários -->
     <section id="LocalizacaoHorarios">
       <div>
-        <h3>Localização</h3>
+        <h3 class="fonte-h3">Localização</h3>
         <img src="/asserts/foto/foto de frente padaria.png" alt="foto da frente da padaria" width="300" height="300">
         <ul>
           <li><strong>Endereço:</strong> Rua das Flores, 123 – Bairro Jardim Alegre</li>
@@ -161,6 +166,7 @@
         </ul>
       </div>
 
+      <br><br>
       <section id="horario">
         <h3><strong>Horário de Funcionamento</strong></h3>
         <table border="1">
@@ -191,6 +197,7 @@
   </main>
 
   <!-- Rodapé da página -->
+   <br><br>
   <footer>
     <div>
       <p>&copy; 2025 Padaria Fantasia. Todos os direitos reservados.</p>
