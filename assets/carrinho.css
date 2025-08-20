@@ -2,10 +2,12 @@
 /* ESTILOS ESPECÍFICOS DA PÁGINA DO CARRINHO     */
 /* ============================================= */
 
-/* Aplica um fundo ligeiramente diferente para a página do carrinho */
+/* Aplica um fundo ligeiramente diferente para a página do carrinho 
 body.pagina-carrinho {
   background-color: #fdfaf6;
 }
+*/
+
 
 .pagina-carrinho main {
     max-width: 900px;

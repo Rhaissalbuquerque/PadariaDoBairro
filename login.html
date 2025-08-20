@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>Entrar - Padaria Fantasia</title>
-    
+
     <link rel="stylesheet" href="/assets/style.css">
-    
+
 
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..88;1,300..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
 
-<a href="https://wa.me/5511999998888?text=Olá! Gostaria de mais informações." class="whatsapp-float" target="_blank" title="Falar no WhatsApp">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12.052 0c-6.627 0-12 5.373-12 12s5.373 12 12 12c3.082 0 5.864-1.16 8.026-3.056l-2.073-2.902a7.994 7.994 0 01-5.953 2.058c-4.418 0-8-3.582-8-8s3.582-8 8-8c2.185 0 4.185.875 5.672 2.316l2.368-2.318c-2.455-2.222-5.717-3.606-9.155-3.606zM17.514 12c0 2.21-1.79 4-4 4s-4-1.79-4-4 1.79-4 4-4 4 1.79 4 4z"/>
-    </svg>
-</a>
+    <a href="https://wa.me/5511999998888?text=Olá! Gostaria de mais informações." class="whatsapp-float" target="_blank" title="Falar no WhatsApp">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.052 0c-6.627 0-12 5.373-12 12s5.373 12 12 12c3.082 0 5.864-1.16 8.026-3.056l-2.073-2.902a7.994 7.994 0 01-5.953 2.058c-4.418 0-8-3.582-8-8s3.582-8 8-8c2.185 0 4.185.875 5.672 2.316l2.368-2.318c-2.455-2.222-5.717-3.606-9.155-3.606zM17.514 12c0 2.21-1.79 4-4 4s-4-1.79-4-4 1.79-4 4-4 4 1.79 4 4z" />
+        </svg>
+    </a>
 
-<div class="cabecalho-principal">
-    <img src="/fotos/fotopadarialogo.png" alt="Logo Padaria Fantasia">
-    <nav>
+    <div class="cabecalho-principal">
+        <img src="/fotos/fotopadarialogo.png" alt="Logo Padaria Fantasia">
+        <nav>
             <ul class="menu">
                 <li><a href="/index.html">Início</a></li>
                 <li><a href="/index.html#NossosProdutos">Nossos Produtos</a></li>
@@ -34,52 +36,53 @@
                 <li><a href="/index.html#LocalizacaoHorarios">Onde estamos</a></li>
                 <li><a href="/contato.html">Contato</a></li>
             </ul>
-    </nav>
-    <div class="botoes-login">
-        <a href="/carrinho.html" class="btn btn-carrinho" aria-label="Carrinho de Compras"><i class="fas fa-shopping-cart"></i></a>
-        <a href="/cadastro.html" class="btn btn-primario">Criar conta</a>
-        <a href="/login.html" class="btn btn-secundario">Entrar</a>
+        </nav>
+        <div class="botoes-login">
+            <a href="/carrinho.html" class="btn btn-carrinho" aria-label="Carrinho de Compras"><i class="fas fa-shopping-cart"></i></a>
+            <a href="/cadastro.html" class="btn btn-primario">Criar conta</a>
+            <a href="/login.html" class="btn btn-secundario">Entrar</a>
+        </div>
     </div>
-</div>
 
-<main>
-    <div class="formulario-geral">
-        <h2 class="fonte-secundaria">Acessar sua Conta</h2>
-        <br>
-        <form id="login-form">
-            <fieldset>
-                <legend>Dados de Acesso</legend>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required placeholder="Digite seu email">
-                </div>
-                <div class="form-group">
-                    <label for="senha">Senha:</label>
-                    <input type="password" id="senha" name="senha" required placeholder="Digite sua senha">
-                </div>
-            </fieldset>
-
+    <main>
+        <div class="formulario-geral">
+            <h2 class="fonte-secundaria">Acessar sua Conta</h2>
             <br>
-            
-            <div class="botoes-form">
-                <button type="submit" class="btn-enviar">Entrar</button>
-                <button type="reset" class="btn-apagar">Limpar</button>
-            </div>
+            <form id="login-form">
+                <fieldset>
+                    <legend>Dados de Acesso</legend>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="Digite seu email">
+                    </div>
+                    <div class="form-group">
+                        <label for="senha">Senha:</label>
+                        <input type="password" id="senha" name="senha" required placeholder="Digite sua senha">
+                    </div>
+                </fieldset>
 
-            <p class="link-centralizado">
-                Não tem uma conta? <a href="/cadastro.html">Cadastre-se aqui</a>
-            </p>
+                <br>
 
-        </form>
-    </div>
-</main>
+                <div class="botoes-form">
+                    <button type="submit" class="btn-enviar">Entrar</button>
+                    <button type="reset" class="btn-apagar">Limpar</button>
+                </div>
 
-<footer class="rodape">
-    <div>
-        <p>© 2025 Padaria Fantasia. Todos os direitos reservados.</p>
-        <p>Desenvolvido por <strong>Rhaissa Albuquerque</strong></p>
-    </div>
-</footer>
+                <p class="link-centralizado">
+                    Não tem uma conta? <a href="/cadastro.html">Cadastre-se aqui</a>
+                </p>
+
+            </form>
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <div>
+            <p>© 2025 Padaria Fantasia. Todos os direitos reservados.</p>
+            <p>Desenvolvido por <strong>Rhaissa Albuquerque</strong></p>
+        </div>
+    </footer>
     <script src="/assets/login.js"></script>
 </body>
+
 </html>
