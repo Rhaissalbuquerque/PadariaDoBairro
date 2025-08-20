@@ -1630,3 +1630,18 @@ body.pagina-principal .contador-carrinho {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra mais forte embaixo */
   transition: all 0.2s ease-in-out;
 }
+
+/* ======================================================= */
+/* ESTILO PARA BOTÕES DENTRO DOS CARDS      */
+/* ======================================================= */
+
+.btn-card {
+  background-color: #f5ede3; /* Fundo claro (creme) */
+  color: #552814;           /* Texto escuro (marrom) */
+  border: 1px solid #552814; /* Borda escura (marrom) */
+}
+
+.btn-card:hover {
+  background-color: #e0c9a6;
+  color: #552814;
+}

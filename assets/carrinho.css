@@ -251,24 +251,7 @@ body.pagina-carrinho {
     background-color: #BB793E;
 }
 
-/* --- CÓDIGO ADICIONADO --- */
-/* ========================================================== */
-/* AJUSTE DE TAMANHO DOS BOTÕES DO MENU (SÓ NA PÁG. CARRINHO) */
-/* ========================================================== */
 
-/* Botões "Criar conta" e "Entrar" - Tamanho Menor */
-body.pagina-carrinho .botoes-login a.btn-primario,
-body.pagina-carrinho .botoes-login a.btn-secundario {
-  padding: 6px 14px;
-  font-size: 14px;
-}
-
-/* Botão do Carrinho - Tamanho Menor e Proporcional */
-body.pagina-carrinho .botoes-login .btn-carrinho {
-  padding: 8px 12px;
-  font-size: 16px;
-}
-/* --- FIM DO CÓDIGO ADICIONADO --- */
 
 
 /* --- RESPONSIVIDADE DO CARRINHO --- */
@@ -296,3 +279,19 @@ body.pagina-carrinho .botoes-login .btn-carrinho {
     }
 }
 
+/* ========================================================== */
+/* GARANTE CONSISTÊNCIA DO CABEÇALHO NA PÁG. CARRINHO         */
+/* ========================================================== */
+
+/* Força os botões 'Criar conta' e 'Entrar' a terem o tamanho correto */
+.pagina-carrinho .botoes-login a.btn-primario,
+.pagina-carrinho .botoes-login a.btn-secundario {
+  padding: 6px 14px;
+  font-size: 14px;
+}
+
+/* Força o botão do ícone do carrinho a ter o tamanho correto */
+.pagina-carrinho .botoes-login .btn-carrinho {
+  padding: 8px 12px;
+  font-size: 16px;
+}
