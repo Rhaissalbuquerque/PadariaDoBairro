@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <title>Padaria Fantasia</title>
+    
+</head>
+<body class="pagina-principal">
+
+<a href="https://wa.me/5511999998888?text=Olá! Gostaria de mais informações." class="whatsapp-float" target="_blank" title="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12.052 0c-6.627 0-12 5.373-12 12s5.373 12 12 12c3.082 0 5.864-1.16 8.026-3.056l-2.073-2.902a7.994 7.994 0 01-5.953 2.058c-4.418 0-8-3.582-8-8s3.582-8 8-8c2.185 0 4.185.875 5.672 2.316l2.368-2.318c-2.455-2.222-5.717-3.606-9.155-3.606zM17.514 12c0 2.21-1.79 4-4 4s-4-1.79-4-4 1.79-4 4-4 4 1.79 4 4z"/>
+    </svg>
+</a>
+
+<div class="cabecalho-principal">
+    
+    <img src="/fotos/fotopadarialogo.png" alt="Logo Padaria Fantasia">
+
+    <nav>
+            <ul class="menu">
+                <li><a href="/index.html">Início</a></li>
+                <li><a href="/index.html#NossosProdutos">Nossos Produtos</a></li>
+                <li><a href="/pedidos.html">Pedidos</a></li>
+                <li><a href="/depoimentos.html">Depoimentos</a></li>
+                <li><a href="/index.html#diferenciais">Diferenciais</a></li>
+                <li><a href="/index.html#horario">Horários</a></li>
+                <li><a href="/index.html#LocalizacaoHorarios">Onde estamos</a></li>
+                <li><a href="/contato.html">Contato</a></li>
+            </ul>
+    </nav>
+        
+    <div class="botoes-login">
+        <a href="/carrinho.html" class="btn btn-carrinho" aria-label="Carrinho de Compras">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="carrinho-contador" class="contador-carrinho">0</span>
+        </a>
+        <a href="/cadastro.html" class="btn btn-primario">Criar conta</a>
+        <a href="/login.html" class="btn btn-secundario">Entrar</a>
+    </div>
+
+</div>
+
+<main class="container-main">
+
+    <header class="apresentacao">
+        <div>
+            <h1 class="fonte-principal">Padaria Fantasia</h1>
+            <h2 class="fonte-secundaria">Sabor e tradição que você confia!</h2>
+            <p>
+                Pães artesanais, doces irresistíveis e salgados feitos com paixão,
+                fresquinhos para você a cada dia.
+            </p>
+            <a href="#NossosProdutos" class="btn-cardapio">Ver cardápio completo</a>
+        </div>
+    </header>
+
+    <section id="sobreNos">
+        <div class="text-content">
+            <h2 class="fonte-secundaria">Sobre Nós</h2>
+            <p>
+                A Padaria Fantasia é tradição e sabor no coração do bairro. Desde o ano 2000, somos uma padaria familiar que
+                valoriza a qualidade, o bom atendimento e a variedade. Nosso cardápio versátil reúne desde os pães artesanais
+                feitos com ingredientes selecionados até doces, salgados e cafés preparados com muito cuidado para encantar
+                todos os paladares.
+            </p>
+            <p>
+                Aqui no bairro, somos mais que uma padaria: somos ponto de encontro, aconchego e boas lembranças.
+                Na Padaria Fantasia, cada cliente é recebido com carinho.
+            </p>
+        </div>
+
+        <div id="video-sobrenos">
+            <video width="640" height="360" controls autoplay muted loop>
+                <source src="/video/videopadaria.mp4" type="video/mp4">
+                Seu navegador não suporta o vídeo.
+            </video>
+        </div>
+    </section>
+
+    <section id="NossosProdutos">
+        <h2 class="fonte-secundaria">Nossos Produtos</h2>
+        <p>
+            Nossa vitrine é recheada de pães artesanais, como o francês crocante, o integral macio e o famoso pão de milho da casa.
+            Temos também uma linha irresistível de salgados, tortas, lanches e bolos caseiros, perfeitos para qualquer hora do dia.
+        </p>
+
+        <div class="cards-container">
+            <div class="card">
+                <img src="/fotos/paofrances.jpg" alt="Pão francês">
+                <div class="card-content">
+                    <h3>Pão Francês</h3>
+                    <p class="preco">R$1,00</p>
+                    <p class="descricao">O pão francês, também conhecido como pão de sal, é um tipo de pão pequeno e cilíndrico, popular no Brasil.</p>
+                    
+                    <button class="btn btn-secundario btn-detalhes">Ver Detalhes</button>
+                    <div class="detalhes-produto">
+                        <h4>Ingredientes</h4>
+                        <ul>
+                            <li>Farinha de trigo, água, fermento e sal.</li>
+                        </ul>
+                        <p><strong>Alergênicos:</strong> Contém glúten.</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <img src="/fotos/tortadefrango.jpg" alt="Torta de frango">
+                <div class="card-content">
+                    <h3>Torta de Frango</h3>
+                    <p class="preco">R$20,00</p>
+                    <p class="descricao">Massa leve com recheio de creme de frango delicioso.</p>
+                    
+                    <button class="btn btn-secundario btn-detalhes">Ver Detalhes</button>
+                    <div class="detalhes-produto">
+                        <h4>Ingredientes</h4>
+                        <ul>
+                            <li>Farinha, manteiga, frango desfiado, milho e temperos.</li>
+                        </ul>
+                        <p><strong>Alergênicos:</strong> Contém glúten e lactose.</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <img src="/fotos/bolodechocolate.avif" alt="Bolo de chocolate">
+                <div class="card-content">
+                    <h3>Bolo de Chocolate</h3>
+                    <p class="preco">R$5,00 (fatia)</p>
+                    <p class="descricao">Bolo com massa de chocolate e cobertura cremosa.</p>
+                    
+                    <button class="btn btn-secundario btn-detalhes">Ver Detalhes</button>
+                    <div class="detalhes-produto">
+                        <h4>Ingredientes</h4>
+                        <ul>
+                            <li>Chocolate, farinha, ovos, leite e açúcar.</li>
+                        </ul>
+                        <p><strong>Alergênicos:</strong> Contém glúten, ovos e lactose.</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <img src="/fotos/cafecomleite.jpeg" alt="Café com leite">
+                <div class="card-content">
+                    <h3>Café com Leite</h3>
+                    <p class="preco">R$2,00</p>
+                    <p class="descricao">Tradicional pingado.</p>
+                    
+                    <button class="btn btn-secundario btn-detalhes">Ver Detalhes</button>
+                    <div class="detalhes-produto">
+                        <p>Café coado na hora com leite vaporizado.</p>
+                        <p><strong>Alergênicos:</strong> Contém lactose.</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <img src="/fotos/sucodelaranja.png" alt="Suco de laranja">
+                <div class="card-content">
+                    <h3>Suco de Laranja</h3>
+                    <p class="preco">R$4,00</p>
+                    <p class="descricao">Suco de laranja natural.</p>
+                    
+                    <button class="btn btn-secundario btn-detalhes">Ver Detalhes</button>
+                    <div class="detalhes-produto">
+                        <p>Feito com laranjas frescas espremidas na hora. Sem adição de açúcar.</p>
+                        <p><strong>Alergênicos:</strong> Não contém.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <img src="/fotos/queijo.webp" alt="Croissant de Queijo">
+                <div class="card-content">
+                    <h3>Croissant de Queijo</h3>
+                    <p class="preco">R$6,50</p>
+                    <p class="descricao">Massa folhada e macia, com recheio de queijo derretido.</p>
+                    
+                    <button class="btn btn-secundario btn-detalhes">Ver Detalhes</button>
+                    <div class="detalhes-produto">
+                        <h4>Ingredientes</h4>
+                        <ul>
+                            <li>Massa folhada, queijo muçarela e manteiga.</li>
+                        </ul>
+                        <p><strong>Alergênicos:</strong> Contém glúten e lactose.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="diferenciais">
+        <h2 class="fonte-secundaria">Diferenciais</h2>
+    
+        <div class="cards-diferenciais">
+            <div class="card">
+                <strong>Atendimento acolhedor:</strong> Equipe simpática e pronta para atender com atenção e respeito.
+            </div>
+            <div class="card">
+                <strong>Cardápio variado:</strong> Pães, doces, salgados, cafés e lanches para todos os gostos.
+            </div>
+            <div class="card">
+                <strong>Qualidade nos ingredientes:</strong> Matérias-primas frescas e selecionadas.
+            </div>
+            <div class="card">
+                <strong>Ambiente familiar:</strong> Espaço acolhedor e tradicional.
+            </div>
+            <div class="card">
+                <strong>Tradição e inovação:</strong> Receitas clássicas com toques modernos.
+            </div>
+        </div>
+    
+        <div id="video-diferenciais">
+            <iframe width="600" height="300" src="https://www.youtube.com/embed/C1sks8ZKuL0" title="Coffee Bean Footage Video in 4K" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section id="LocalizacaoHorarios">
+        <div class="map-container">
+            <h3 class="fonte-secundaria">Venha nos visitar</h3>
+            <iframe class="iframe-localizacao" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.440265692015!2d-46.65759168502251!3d-23.551187484687595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59a685714343%3A0xb35515c0e18c8e81!2sRua%20Augusta%2C%201508%20-%20Consola%C3%A7%C3%A3o%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001304-001!5e0!3m2!1spt-BR!2sbr!4v1625695662706!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="info-container">
+            <div class="location-card">
+                <h4>Localização:</h4>
+                <ul>
+                    <li><strong>Endereço:</strong> Rua Augusta, 1508 – Consolação, São Paulo – SP, 01304-001</li>
+                    <li><strong>Telefone:</strong> <a href="tel:+5511999998888">(11) 99999-8888</a></li>
+                </ul>
+            </div>
+
+            <div id="horario">
+                <h3><strong>Horário de funcionamento:</strong></h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Dia</th>
+                            <th>Horário</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Segunda a Sexta</td>
+                            <td>6h às 19h</td>
+                        </tr>
+                        <tr>
+                            <td>Sábado</td>
+                            <td>6h às 18h</td>
+                        </tr>
+                        <tr>
+                            <td>Domingo</td>
+                            <td>7h às 13h</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="rodape">
+    <div>
+        <p>© 2025 Padaria Fantasia. Todos os direitos reservados.</p>
+        <p>Desenvolvido por <strong>Rhaissa Albuquerque</strong></p>
+    </div>
+</footer>
+    <script src="/assets/paginas.js"></script>
+</body>
+</html>

@@ -1,0 +1,371 @@
+/* ============================================= */
+/* CSS DEDICADO PARA A PÁGINA DE CADASTRO        */
+/* ============================================= */
+
+/* ========== RESET E ESTILOS GLOBAIS ========== */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #f5ede3;
+  color: #552814;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ESTILO DE TAMANHO ESPECÍFICO PARA O CONTEÚDO DESTA PÁGINA */
+main {
+  flex-grow: 1;
+  width: 90%;
+  max-width: 1000px; /* Largura maior para esta página */
+  margin: 40px auto;
+  padding: 25px;
+  background: #fff7ee;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== TIPOGRAFIA ========== */
+.fonte-secundaria {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 40px;
+}
+
+h2 {
+  color: #552814;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e0c9a6;
+  padding-bottom: 5px;
+  font-size: 40px;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+}
+
+/* ========== CABEÇALHO ========== */
+.cabecalho-principal {
+  background-color: #552814;
+  padding: 8px 20px;
+  color: #f5ede3;
+  border-bottom: 2px solid #e0c9a6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cabecalho-principal img {
+  height: 80px;
+  width: auto;
+  max-height: 100px;
+}
+
+nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu li a {
+  color: #f5ede3;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.menu li a:hover {
+  color: #bb793e;
+  background-color: rgba(245, 237, 227, 0.1);
+}
+
+.botoes-login {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* BOTÕES DO MENU */
+.botoes-login a.btn-primario,
+.botoes-login a.btn-secundario {
+  padding: 6px 14px; /* DIMINUÍDO */
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 14px; /* Mantido, pois é um bom tamanho de leitura */
+  transition: all 0.3s ease;
+  display: inline-block;
+  border: 2px solid transparent;
+}
+
+.botoes-login a.btn-primario {
+  background-color: #bb793e;
+  color: #f5ede3;
+  border-color: #bb793e;
+}
+
+.botoes-login a.btn-primario:hover {
+  background-color: #552814;
+  border-color: #552814;
+}
+
+.botoes-login a.btn-secundario {
+  background-color: #bb793e;
+  color: #f5ede3;
+  border-color: #bb793e;
+}
+
+.botoes-login a.btn-secundario:hover {
+  background-color: #552814;
+  border-color: #552814;
+}
+
+/* Estilo específico para o botão de carrinho  */
+.botoes-login .btn-carrinho {
+  background-color: #bb793e;
+  color: #f5ede3;
+  border: none;
+  padding: 8px 12px; /* DIMINUÍDO */
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-size: 14px; /* DIMINUÍDO */
+}
+
+.botoes-login .btn-carrinho:hover {
+  background-color: #552814;
+}
+
+/* ========== FORMULÁRIO DE CADASTRO ========== */
+.formulario-geral {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: transparent;
+  border-radius: 12px;
+  box-shadow: none;
+}
+
+.formulario-geral fieldset {
+  border: 2px solid #552814;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f5ede3;
+}
+
+.formulario-geral legend {
+  font-weight: bold;
+  font-size: 18px;
+  color: #552814;
+  padding: 0 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-weight: bold;
+  color: #552814;
+  font-size: 16px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bb793e;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.form-group-checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group-checkbox label {
+  font-weight: normal;
+  font-size: 18px;
+  color: #552814;
+}
+
+/* --- VALIDAÇÃO E MEDIDOR DE SENHA --- */
+.error-message {
+  color: #e74c3c;
+  font-size: 0.8rem;
+  font-weight: bold;
+  display: block;
+  margin-top: 5px;
+  height: 15px;
+}
+
+input.invalid {
+  border-color: #e74c3c !important;
+  background-color: #fdd;
+}
+
+input.valid {
+  border-color: #2ecc71 !important;
+  background-color: #dfd;
+}
+
+#password-strength-bar {
+  height: 100%;
+  width: 0;
+  border-radius: 4px;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.strength-weak {
+  width: 33%;
+  background-color: #e74c3c;
+}
+.strength-medium {
+  width: 66%;
+  background-color: #f39c12;
+}
+.strength-strong {
+  width: 100%;
+  background-color: #2ecc71;
+}
+
+/* --- BOTÕES DO FORMULÁRIO --- */
+.btn-enviar {
+  background-color: #552814;
+  color: #f5ede3;
+  padding: 10px 18px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-right: 10px;
+}
+
+.btn-enviar:hover {
+  background-color: #bb793e;
+  transform: scale(1.03);
+}
+
+.btn-apagar {
+  background-color: #f5ede3;
+  border: 1px solid #552814;
+  color: #552814;
+  padding: 10px 18px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-apagar:hover {
+  background-color: #bb793e;
+  color: #f5ede3;
+  transform: scale(1.03);
+}
+
+/* ========== RODAPÉ ========== */
+.rodape {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #552814;
+  color: #f5ede3;
+  font-size: 14px;
+  text-align: center;
+  margin-top: auto;
+}
+
+/* ========== WHATSAPP FLOAT ========== */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+  z-index: 1000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.whatsapp-float:hover {
+  background-color: #20ba5a;
+  transform: scale(1.1);
+}
+
+.whatsapp-float svg {
+  width: 32px;
+  height: 32px;
+  fill: #fff;
+}
+
+/* ========== RESPONSIVIDADE ========== */
+@media (max-width: 1024px) {
+  main {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    width: 95%;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  h2,
+  .formulario-geral h2.fonte-secundaria {
+    font-size: 32px;
+  }
+  .cabecalho-principal {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.botoes-form {
+    display: flex;
+    justify-content: center; /* Centraliza os botões */
+    gap: 2px; /* Espaço entre os botões */
+    margin-top: 20px;
+}

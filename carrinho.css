@@ -1,0 +1,298 @@
+/* ============================================= */
+/* ESTILOS ESPECÍFICOS DA PÁGINA DO CARRINHO     */
+/* ============================================= */
+
+/* Aplica um fundo ligeiramente diferente para a página do carrinho */
+body.pagina-carrinho {
+  background-color: #fdfaf6;
+}
+
+.pagina-carrinho main {
+    max-width: 900px;
+    background: #fff; /* Fundo branco para destacar o conteúdo do carrinho */
+}
+
+/* Título "Carrinho de Compras" */
+.pagina-carrinho h2 {
+    text-align: center;
+    font-size: 36px;
+}
+
+.carrinho-vazio {
+    text-align: center;
+    font-style: italic;
+    color: #777;
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #f9f6f2;
+    border-radius: 8px;
+}
+
+/* --- LISTA DE PRODUTOS --- */
+
+#lista-carrinho {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+    border-top: 1px solid #e0c9a6;
+}
+
+.produto {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 10px;
+    border-bottom: 1px solid #e0c9a6;
+}
+
+.foto-produto {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.info {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto; /* Colunas para nome, quantidade, total e remover */
+    align-items: center;
+    gap: 15px;
+}
+
+.produto-nome {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #552814;
+}
+
+.quantidade-controles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-qtd {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #BB793E;
+    background-color: #fff;
+    color: #BB793E;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-qtd:hover {
+    background-color: #BB793E;
+    color: #fff;
+}
+
+.quantidade-valor {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.item-total {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #552814;
+    text-align: right;
+}
+
+.btn-remover {
+    background: transparent;
+    border: none;
+    color: #e74c3c;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    text-decoration: none;
+}
+.btn-remover:hover {
+    color: #c0392b;
+    text-decoration: underline;
+}
+
+.btn-limpar-container {
+  display: flex;
+  justify-content: flex-end; /* Alinha o botão à direita */
+  margin: -10px 0 20px 0;
+}
+
+
+/* --- RESUMO DO CARRINHO E FRETE --- */
+
+.carrinho-resumo {
+    margin-top: 30px;
+    padding: 25px;
+    background: #f9f6f2; /* Fundo suave para o resumo */
+    border-radius: 12px;
+    border: 1px solid #e0c9a6;
+}
+
+.carrinho-resumo h3 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #552814;
+    font-family: "Playfair Display", serif;
+}
+
+.frete-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.frete-input input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #BB793E;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.resumo-valores {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    margin: 20px 0;
+    padding-top: 20px;
+    border-top: 1px solid #e0c9a6;
+    font-size: 1rem;
+}
+
+.resumo-valores .total {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #552814;
+    margin-top: 8px;
+}
+
+.botoes-carrinho {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+/* --- ESTILO DOS BOTÕES DO CARRINHO --- */
+
+.btn-calculo-frete {
+    background-color: #552814;
+    color: #F5EDE3;
+    padding: 6px 14px;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    font-weight: bold;
+}
+.btn-calculo-frete:hover {
+    background-color: #BB793E;
+}
+
+.btn-limpar {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 6px 14px;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.btn-limpar:hover {
+    background-color: #c0392b;
+}
+
+.btn-continuar {
+    background-color: #F5EDE3;
+    border: 1px solid #552814;
+    color: #552814;
+    padding: 6px 14px;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+}
+.btn-continuar:hover {
+    background-color: #e0c9a6;
+    color: #552814;
+}
+
+.btn-finalizar-compra {
+    background-color: #552814;
+    color: #F5EDE3;
+    padding: 6px 14px;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+    font-weight: bold;
+}
+.btn-finalizar-compra:hover {
+    background-color: #BB793E;
+}
+
+/* --- CÓDIGO ADICIONADO --- */
+/* ========================================================== */
+/* AJUSTE DE TAMANHO DOS BOTÕES DO MENU (SÓ NA PÁG. CARRINHO) */
+/* ========================================================== */
+
+/* Botões "Criar conta" e "Entrar" - Tamanho Menor */
+body.pagina-carrinho .botoes-login a.btn-primario,
+body.pagina-carrinho .botoes-login a.btn-secundario {
+  padding: 6px 14px;
+  font-size: 14px;
+}
+
+/* Botão do Carrinho - Tamanho Menor e Proporcional */
+body.pagina-carrinho .botoes-login .btn-carrinho {
+  padding: 8px 12px;
+  font-size: 16px;
+}
+/* --- FIM DO CÓDIGO ADICIONADO --- */
+
+
+/* --- RESPONSIVIDADE DO CARRINHO --- */
+
+@media (max-width: 768px) {
+    .info {
+        grid-template-columns: 1fr; /* Uma coluna no celular */
+        grid-template-rows: auto auto auto auto;
+        gap: 10px;
+        justify-items: start; /* Alinha tudo à esquerda */
+    }
+    
+    .item-total,
+    .quantidade-controles {
+        justify-self: start;
+        text-align: left;
+    }
+
+    .botoes-carrinho {
+        flex-direction: column;
+    }
+
+    .frete-input {
+        flex-direction: column;
+    }
+}
+
