@@ -1,6 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // 1. Seleciona os elementos do formulário de login
+    // =============================================
+    // CÓDIGO DO MENU HAMBÚRGUER
+    // =============================================
+    const btnMobile = document.getElementById('btn-mobile');
+    const nav = document.getElementById('nav');
+
+    if (btnMobile && nav) {
+        btnMobile.addEventListener('click', () => {
+            nav.classList.toggle('ativo');
+            const menuAtivo = nav.classList.contains('ativo');
+            btnMobile.setAttribute('aria-expanded', menuAtivo);
+            if (menuAtivo) {
+                btnMobile.setAttribute('aria-label', 'Fechar Menu');
+            } else {
+                btnMobile.setAttribute('aria-label', 'Abrir Menu');
+            }
+        });
+    }
+    // =============================================
+    // FIM DO CÓDIGO DO MENU HAMBÚRGUER
+    // =============================================
+
+
+    // =============================================
+    // CÓDIGO DO FORMULÁRIO DE LOGIN
+    // =============================================
     const loginForm = document.getElementById('login-form');
     const emailInput = document.getElementById('email');
     const senhaInput = document.getElementById('senha');
@@ -8,17 +33,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // Verifica se o formulário realmente existe na página atual
     if (loginForm) {
 
-        // 2. Adiciona um "escutador" para o evento de envio do formulário
+        // Adiciona um "escutador" para o evento de envio do formulário
         loginForm.addEventListener('submit', (event) => {
             
-            // 3. Previne o comportamento padrão do navegador (que é recarregar a página)
+            // Previne o comportamento padrão do navegador (que é recarregar a página)
             event.preventDefault();
 
-            // 4. Pega os valores digitados pelo usuário
+            // Pega os valores digitados pelo usuário
             const email = emailInput.value.trim();
             const senha = senhaInput.value.trim();
 
-            // 5. Validação básica: verifica se os campos não estão vazios
+            // Validação básica: verifica se os campos não estão vazios
             if (email === '' || senha === '') {
                 alert('Por favor, preencha todos os campos.');
                 return; // Para a execução aqui se os campos estiverem vazios
@@ -31,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const emailCorreto = 'user@padaria.com';
             const senhaCorreta = 'senha123';
             
-            // 6. Verifica se os dados digitados correspondem aos dados de teste
+            // Verifica se os dados digitados correspondem aos dados de teste
             if (email === emailCorreto && senha === senhaCorreta) {
                 // Se estiverem corretos:
                 alert('Login realizado com sucesso! Bem-vindo(a)!');

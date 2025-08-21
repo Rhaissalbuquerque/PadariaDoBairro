@@ -19,7 +19,7 @@ body {
 }
 
 main {
-  flex-grow: 1; 
+  flex-grow: 1;
   max-width: 800px;
   margin: 40px auto;
   padding: 20px;
@@ -172,13 +172,19 @@ nav {
 
 /* Estilo específico para o botão de carrinho  */
 .botoes-login .btn-carrinho {
+  position: relative;
   background-color: #bb793e;
   color: #f5ede3;
   border: none;
-  padding: 8px 12px; /* DIMINUÍDO */
+  padding: 8px 12px;
   border-radius: 8px;
   transition: all 0.3s ease;
-  font-size: 16px; /* DIMINUÍDO */
+  font-size: 14px;
+
+  /* --- LINHAS ADICIONADAS PARA CENTRALIZAR O ÍCONE --- */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .botoes-login .btn-carrinho:hover {
@@ -201,6 +207,16 @@ nav {
   justify-content: center;
   z-index: 10;
 }
+
+/* ========== LÓGICA DE VISIBILIDADE DE ELEMENTOS ========== */
+/* Esconde o botão do carrinho e o contador APENAS nas páginas de login e cadastro */
+.pagina-login .btn-carrinho,
+.pagina-cadastro .btn-carrinho,
+.pagina-login .contador-carrinho,
+.pagina-cadastro .contador-carrinho {
+    display: none;
+}
+
 
 /* ========== ESTILOS DE PÁGINA ESPECÍFICOS (CARRINHO E CONTATO) ========== */
 /* Estilos de produto do carrinho */
@@ -1627,7 +1643,7 @@ body.pagina-principal .contador-carrinho {
 
 .produto-foco {
   /* Levanta o card um pouco para cima e aumenta o zoom */
-  transform: translateY(-8px) scale(1.02); 
+  transform: translateY(-8px) scale(1.02);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra mais forte embaixo */
   transition: all 0.2s ease-in-out;
 }
@@ -1645,4 +1661,90 @@ body.pagina-principal .contador-carrinho {
 .btn-card:hover {
   background-color: #e0c9a6;
   color: #552814;
+}
+
+
+/* --- ESTILOS DO MENU HAMBÚRGUER --- */
+
+/* Esconde o botão em telas grandes */
+#btn-mobile {
+    display: none;
+}
+
+/* Media Query: Aplica estes estilos APENAS em telas de até 768px de largura */
+@media (max-width: 768px) {
+
+    /* Esconde o menu de navegação normal */
+    .menu {
+        display: none; /* O menu começa escondido */
+        position: absolute;
+        width: 100%;
+        top: 80px; /* Altura do seu cabeçalho, ajuste se necessário */
+        right: 0px;
+        background: #8B4513; /* Cor de fundo do menu mobile, escolha uma que combine */
+        z-index: 1000; /* Garante que o menu fique sobre outros elementos */
+        border-top: 1px solid #000000;
+    }
+
+    /* Mostra o menu quando a navegação está ATIVA */
+    #nav.ativo .menu {
+        display: block;
+    }
+
+    /* Estilos dos links dentro do menu mobile */
+    .menu li {
+        display: block; /* Faz os links ficarem um abaixo do outro */
+        margin: 0;
+    }
+
+    .menu a {
+        padding: 1rem;
+        display: block;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.959);
+    }
+
+    /* Mostra o botão hambúrguer e o estiliza */
+    #btn-mobile {
+        display: flex; /* Usamos flex para alinhar o ícone dentro do botão */
+        align-items: center;
+        padding: .5rem 1rem;
+        font-size: 1.5rem; /* Tamanho do ícone */
+        border: none;
+        background: none;
+        cursor: pointer;
+        color: #ffffff; /* Cor do ícone, ajuste conforme sua paleta */
+    }
+}
+
+/* Efeito ao passar o mouse sobre o link do menu mobile */
+@media (max-width: 768px) {
+    .menu a:hover {
+        background-color: #A0522D; /* Um tom de marrom um pouco mais claro para o destaque */
+        color: #fff; /* Garante que o texto continue branco */
+    }
+}
+
+/* ========== RESPONSIVIDADE PARA CELULARES (PADRÃO) ========== */
+@media (max-width: 480px) {
+    .cabecalho-principal {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* ESPAÇAMENTO PADRÃO ENTRE OS ITENS */
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .cabecalho-principal img {
+        height: 60px; /* Tamanho do logo um pouco menor no celular */
+    }
+
+    /* Remove o truque do espaçador que não é necessário na vertical */
+    nav {
+        flex-grow: 0; 
+    }
+
+    .botoes-login {
+        width: 100%;
+        justify-content: center;
+    }
 }

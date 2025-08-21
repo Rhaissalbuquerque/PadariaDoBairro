@@ -5,12 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const senhaInput = document.getElementById('senha');
     const confirmaSenhaInput = document.getElementById('confirma-senha');
     const cepInput = document.getElementById('cep');
-    const telefoneInput = document.getElementById('telefone'); // NOVO: Seleção do campo de telefone
+    const telefoneInput = document.getElementById('telefone');
 
     // Seleciona os elementos de erro
     const emailError = document.getElementById('email-error');
     const confirmPasswordError = document.getElementById('confirm-password-error');
-    // REMOVIDO: Seleção da barra de força e texto
 
     // Validação do Email em tempo real
     if (emailInput) {
@@ -29,16 +28,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-
     
-    // validação de confirmação
+    // Validação de confirmação de senha
     if (senhaInput) {
         senhaInput.addEventListener('input', () => {
             validarConfirmacaoSenha();
         });
     }
 
-    // Validação da Confirmação de Senha
     if (confirmaSenhaInput) {
         confirmaSenhaInput.addEventListener('input', validarConfirmacaoSenha);
     }
@@ -77,27 +74,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-    // NOVO: Máscara automática para o campo Telefone
+    // Máscara automática para o campo Telefone (VERSÃO CORRIGIDA)
     if (telefoneInput) {
         telefoneInput.addEventListener('input', (event) => {
             let valor = event.target.value.replace(/\D/g, '');
-            valor = valor.substring(0, 11); // Limita a 11 dígitos (DDD + 9 dígitos)
+            valor = valor.substring(0, 11);
 
             let valorFormatado = '';
             if (valor.length > 0) {
                 valorFormatado = '(' + valor.substring(0, 2);
             }
             if (valor.length > 2) {
-                valorFormatado += ') ' + valor.substring(2, 7);
-            }
-            if (valor.length > 7) {
-                valorFormatado += '-' + valor.substring(7);
+                // Verifica se é celular (11 dígitos) para aplicar a máscara correta
+                if (valor.length > 10) { 
+                    valorFormatado += ') ' + valor.substring(2, 7) + '-' + valor.substring(7, 11);
+                } else {
+                    valorFormatado += ') ' + valor.substring(2, 6) + '-' + valor.substring(6, 10);
+                }
             }
             
             event.target.value = valorFormatado;
         });
     }
-
 
     // Prevenção de envio se os dados estiverem inválidos
     if (form) {
@@ -110,8 +108,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 alert('Por favor, corrija os erros no formulário antes de enviar.');
             } else {
                 alert('Cadastro realizado com sucesso!');
-                // form.submit(); 
+                // Aqui você enviaria os dados do formulário para o servidor.
+                // Ex: form.submit(); 
             }
         });
+    }
+});
+
+// Seleciona o botão e o elemento de navegação
+const btnMobile = document.getElementById('btn-mobile');
+const nav = document.getElementById('nav');
+
+// Adiciona um "ouvinte" de evento de clique ao botão
+btnMobile.addEventListener('click', () => {
+    // A cada clique, ele ADICIONA ou REMOVE a classe 'ativo' do nav
+    nav.classList.toggle('ativo');
+
+    // Atualiza os atributos aria para acessibilidade
+    const menuAtivo = nav.classList.contains('ativo');
+    btnMobile.setAttribute('aria-expanded', menuAtivo);
+    if (menuAtivo) {
+        btnMobile.setAttribute('aria-label', 'Fechar Menu');
+    } else {
+        btnMobile.setAttribute('aria-label', 'Abrir Menu');
     }
 });

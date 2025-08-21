@@ -13,31 +13,39 @@
 </head>
 <body>
 
-<a href="https://wa.me/5511999998888?text=Olá! Gostaria de mais informações." class="whatsapp-float" target="_blank" title="Falar no WhatsApp">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12.052 0c-6.627 0-12 5.373-12 12s5.373 12 12 12c3.082 0 5.864-1.16 8.026-3.056l-2.073-2.902a7.994 7.994 0 01-5.953 2.058c-4.418 0-8-3.582-8-8s3.582-8 8-8c2.185 0 4.185.875 5.672 2.316l2.368-2.318c-2.455-2.222-5.717-3.606-9.155-3.606zM17.514 12c0 2.21-1.79 4-4 4s-4-1.79-4-4 1.79-4 4-4 4 1.79 4 4z"/>
-    </svg>
-</a>
+    <a href="https://wa.me/5511999998888?text=Olá! Gostaria de mais informações." class="whatsapp-float" target="_blank" title="Falar no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
 <div class="cabecalho-principal">
+    
     <img src="/fotos/fotopadarialogo.png" alt="Logo Padaria Fantasia">
-    <nav>
-            <ul class="menu">
-                <li><a href="/index.html">Início</a></li>
-                <li><a href="/index.html#NossosProdutos">Nossos Produtos</a></li>
-                <li><a href="/pedidos.html">Pedidos</a></li>
-                <li><a href="/depoimentos.html">Depoimentos</a></li>
-                <li><a href="/index.html#diferenciais">Diferenciais</a></li>
-                <li><a href="/index.html#horario">Horários</a></li>
-                <li><a href="/index.html#LocalizacaoHorarios">Onde estamos</a></li>
-                <li><a href="/contato.html">Contato</a></li>
-            </ul>
+
+    <nav id="nav">
+        <ul class="menu">
+            <li><a href="/index.html">Início</a></li>
+            <li><a href="/index.html#NossosProdutos">Nossos Produtos</a></li>
+            <li><a href="/pedidos.html">Pedidos</a></li>
+            <li><a href="/depoimentos.html">Depoimentos</a></li>
+            <li><a href="/index.html#diferenciais">Diferenciais</a></li>
+            <li><a href="/index.html#horario">Horários</a></li>
+            <li><a href="/index.html#LocalizacaoHorarios">Onde estamos</a></li>
+            <li><a href="/contato.html">Contato</a></li>
+        </ul>
     </nav>
+
+    <button id="btn-mobile" aria-label="Abrir Menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+    </button>
     <div class="botoes-login">
-        <a href="/carrinho.html" class="btn btn-carrinho" aria-label="Carrinho de Compras"><i class="fas fa-shopping-cart"></i></a>
+        <a href="/carrinho.html" class="btn btn-carrinho" aria-label="Carrinho de Compras">
+            <i class="fas fa-shopping-cart"></i>
+            
+        </a>
         <a href="/cadastro.html" class="btn btn-primario">Criar conta</a>
         <a href="/login.html" class="btn btn-secundario">Entrar</a>
     </div>
+
 </div>
 
 <main>
@@ -83,9 +91,13 @@
                 </div>
             
                 <div class="form-group-textarea">
+
                     <label for="mensagem">Mensagem*:</label>
-                    <textarea id="mensagem" name="mensagem" required minlength="10" placeholder="Escreva sua mensagem aqui..."></textarea>
-                </div>
+                    <textarea id="mensagem" name="mensagem" required minlength="10" maxlength="1000" placeholder="Escreva sua mensagem aqui..."></textarea>
+                    
+                <div id="contador-caracteres">0 / 1000</div>
+    </div>
+
             </fieldset>
 
             <br>

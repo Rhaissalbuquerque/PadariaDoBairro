@@ -21,11 +21,10 @@ body {
   min-height: 100vh;
 }
 
-/* ESTILO DE TAMANHO ESPECÍFICO PARA O CONTEÚDO DESTA PÁGINA */
 main {
   flex-grow: 1;
   width: 90%;
-  max-width: 1000px; /* Largura maior para esta página */
+  max-width: 1000px;
   margin: 40px auto;
   padding: 25px;
   background: #fff7ee;
@@ -105,14 +104,13 @@ nav {
   align-items: center;
 }
 
-/* BOTÕES DO MENU */
 .botoes-login a.btn-primario,
 .botoes-login a.btn-secundario {
-  padding: 6px 14px; /* DIMINUÍDO */
+  padding: 6px 14px;
   border-radius: 8px;
   font-weight: bold;
   text-decoration: none;
-  font-size: 14px; /* Mantido, pois é um bom tamanho de leitura */
+  font-size: 14px;
   transition: all 0.3s ease;
   display: inline-block;
   border: 2px solid transparent;
@@ -140,19 +138,43 @@ nav {
   border-color: #552814;
 }
 
-/* Estilo específico para o botão de carrinho  */
 .botoes-login .btn-carrinho {
+  position: relative;
   background-color: #bb793e;
   color: #f5ede3;
   border: none;
-  padding: 8px 12px; /* DIMINUÍDO */
+  padding: 8px 12px;
   border-radius: 8px;
   transition: all 0.3s ease;
-  font-size: 14px; /* DIMINUÍDO */
+  font-size: 14px;
 }
 
 .botoes-login .btn-carrinho:hover {
   background-color: #552814;
+}
+
+.contador-carrinho {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #e63946;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+/* ========== LÓGICA DE VISIBILIDADE DE ELEMENTOS ========== */
+/* Esconde o contador do carrinho nas páginas de login e cadastro com prioridade máxima */
+body.pagina-login .botoes-login .contador-carrinho,
+body.pagina-cadastro .botoes-login .contador-carrinho {
+    display: none !important;
 }
 
 /* ========== FORMULÁRIO DE CADASTRO ========== */
@@ -256,6 +278,13 @@ input.valid {
 }
 
 /* --- BOTÕES DO FORMULÁRIO --- */
+.botoes-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
 .btn-enviar {
   background-color: #552814;
   color: #f5ede3;
@@ -330,19 +359,22 @@ input.valid {
   transform: scale(1.1);
 }
 
-.whatsapp-float svg {
-  width: 32px;
-  height: 32px;
-  fill: #fff;
+.whatsapp-float i {
+  color: #fff;
 }
 
-/* ========== RESPONSIVIDADE ========== */
+/* ========== RESPONSIVIDADE E MENU HAMBÚRGUER ========== */
+#btn-mobile {
+    display: none;
+}
+
 @media (max-width: 1024px) {
   main {
     width: 90%;
   }
 }
 
+/* --- Para Tablets --- */
 @media (max-width: 768px) {
   main {
     width: 95%;
@@ -353,19 +385,120 @@ input.valid {
   .formulario-geral h2.fonte-secundaria {
     font-size: 32px;
   }
+  
   .cabecalho-principal {
-    flex-direction: column;
-    gap: 15px;
+    flex-direction: row;
+    align-items: center; /* Alinha verticalmente */
   }
-  .menu {
-    flex-wrap: wrap;
+
+  /* Truque para empurrar botões para a direita */
+  nav {
+    flex-grow: 1;
+  }
+  
+  .menu,
+  .botoes-login .btn-primario,
+  .botoes-login .btn-secundario {
+      display: none;
+  }
+
+  /* Estilos para quando o menu hambúrguer for aberto */
+  #nav.ativo .menu {
+      display: block;
+      position: absolute;
+      width: 100%;
+      top: 98px;
+      right: 0px;
+      background: #8B4513;
+      z-index: 1000;
+      border-top: 1px solid #e0c9a6;
+  }
+
+  #nav.ativo .menu li {
+      display: block;
+  }
+
+  #nav.ativo .menu a {
+      padding: 1rem;
+      display: block;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+  }
+
+  #nav.ativo .menu a:hover {
+    background-color: #A0522D;
+  }
+
+  /* ÍCONE HAMBÚRGUER PERSONALIZADO */
+  #btn-mobile {
+    display: flex;
+    align-items: center;
     justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  #btn-mobile .fa-bars {
+    font-size: 0;
+    display: block;
+    position: relative;
+    width: 28px;
+    height: 4px;
+    background-color: #f5ede3;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  #btn-mobile .fa-bars::before,
+  #btn-mobile .fa-bars::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #f5ede3;
+    border-radius: 2px;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  #btn-mobile .fa-bars::before {
+    transform: translateY(-9px); 
+  }
+
+  #btn-mobile .fa-bars::after {
+    transform: translateY(9px);
+  }
+
+  /* Animação para virar um "X" */
+  #nav.ativo #btn-mobile .fa-bars {
+    background-color: transparent;
+  }
+  #nav.ativo #btn-mobile .fa-bars::before {
+    transform: rotate(45deg);
+  }
+  #nav.ativo #btn-mobile .fa-bars::after {
+    transform: rotate(-45deg);
   }
 }
 
-.botoes-form {
-    display: flex;
-    justify-content: center; /* Centraliza os botões */
-    gap: 2px; /* Espaço entre os botões */
-    margin-top: 20px;
+/* --- Para Celulares --- */
+@media (max-width: 480px) {
+    .cabecalho-principal {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    /* Remove o truque do espaçador, pois não é necessário na vertical */
+    nav {
+        flex-grow: 0;
+    }
+
+    .botoes-login {
+        width: 100%;
+        justify-content: center;
+    }
 }
