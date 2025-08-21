@@ -110,6 +110,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 alert('Cadastro realizado com sucesso!');
                 // Aqui você enviaria os dados do formulário para o servidor.
                 // Ex: form.submit(); 
+                // ADICIONADO: Limpa todos os campos do formulário
+                form.reset(); 
             }
         });
     }
