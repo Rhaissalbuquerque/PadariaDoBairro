@@ -1,60 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carrinho de Compras - Padaria Fantasia</title>
 
-    <link rel="stylesheet" href="/assets/style.css"/>
-    <link rel="stylesheet" href="/assets/carrinho.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="./assets/cs/style.css" />
+    <link rel="stylesheet" href="./assets/cs/carrinho.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
+
 <body class="pagina-carrinho">
 
-        <a href="https://wa.me/5511999998888?text=Olá! Gostaria de mais informações." class="whatsapp-float" target="_blank" title="Falar no WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-        </a>
+    <a href="https://wa.me/5511999998888?text=Olá! Gostaria de mais informações." class="whatsapp-float" target="_blank" title="Falar no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
- <div class="cabecalho-principal">
-    
-    <img src="/fotos/fotopadarialogo.png" alt="Logo Padaria Fantasia">
+    <div class="cabecalho-principal">
 
-    <nav id="nav">
-        <ul class="menu">
-            <li><a href="/index.html">Início</a></li>
-            <li><a href="/index.html#NossosProdutos">Nossos Produtos</a></li>
-            <li><a href="/pedidos.html">Pedidos</a></li>
-            <li><a href="/depoimentos.html">Depoimentos</a></li>
-            <li><a href="/index.html#diferenciais">Diferenciais</a></li>
-            <li><a href="/index.html#horario">Horários</a></li>
-            <li><a href="/index.html#LocalizacaoHorarios">Onde estamos</a></li>
-            <li><a href="/contato.html">Contato</a></li>
-        </ul>
-    </nav>
+        <img src="/assets/fotos/fotopadarialogo.png" alt="Logo Padaria Fantasia">
 
-    <button id="btn-mobile" aria-label="Abrir Menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
-        <i class="fas fa-bars"></i>
-    </button>
-    <div class="botoes-login">
-        <a href="/carrinho.html" class="btn btn-carrinho" aria-label="Carrinho de Compras">
-            <i class="fas fa-shopping-cart"></i>
-            <span id="carrinho-contador" class="contador-carrinho">0</span>
-        </a>
-        <a href="/cadastro.html" class="btn btn-primario">Criar conta</a>
-        <a href="/login.html" class="btn btn-secundario">Entrar</a>
+        <nav id="nav">
+                <ul class="menu">
+                    <li><a href="/index.html">Início</a></li>
+                    <li><a href="/index.html#NossosProdutos">Nossos Produtos</a></li>
+                    <li><a href="/pedidos.html">Pedidos</a></li>
+                    <li><a href="/depoimentos.html">Depoimentos</a></li>
+                    <li><a href="/index.html#diferenciais">Diferenciais</a></li>
+                    <li><a href="/index.html#horario">Horários</a></li>
+                    <li><a href="/index.html#LocalizacaoHorarios">Onde estamos</a></li>
+                    <li><a href="/contato.html">Contato</a></li>
+                </ul>
+        </nav>
+
+        <button id="btn-mobile" aria-label="Abrir Menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="botoes-login">
+            <a href="/carrinho.html" class="btn btn-carrinho" aria-label="Carrinho de Compras">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="carrinho-contador" class="contador-carrinho">0</span>
+            </a>
+            <a href="/cadastro.html" class="btn btn-primario">Criar conta</a>
+            <a href="/login.html" class="btn btn-secundario">Entrar</a>
+        </div>
+
     </div>
-
-</div>
 
     <main class="carrinho-main">
         <div class="carrinho-container">
             <h2>Carrinho de Compras</h2>
-            
+
             <p id="carrinho-vazio" class="carrinho-vazio" style="display:none;">Seu carrinho está vazio.</p>
 
             <div id="lista-carrinho">
                 <div class="produto" data-nome="Pão Francês" data-preco="1.00" data-imagem="/fotos/paofrances.jpg">
-                    <img src="/fotos/paofrances.jpg" alt="Pão francês" class="foto-produto">
+                    <img src="/assets/fotos/paofrances.jpg" alt="Pão francês" class="foto-produto">
                     <div class="info">
                         <p class="produto-nome">Pão Francês</p>
                         <div class="quantidade-controles">
@@ -68,7 +70,7 @@
                 </div>
 
                 <div class="produto" data-nome="Torta de Frango" data-preco="20.00" data-imagem="/fotos/tortadefrango.jpg">
-                    <img src="/fotos/tortadefrango.jpg" alt="Torta de frango" class="foto-produto">
+                    <img src="/assets/fotos/tortadefrango.jpg" alt="Torta de frango" class="foto-produto">
                     <div class="info">
                         <p class="produto-nome">Torta de Frango</p>
                         <div class="quantidade-controles">
@@ -82,7 +84,7 @@
                 </div>
 
                 <div class="produto" data-nome="Bolo de Chocolate" data-preco="5.00" data-imagem="/fotos/bolodechocolate.avif">
-                    <img src="/fotos/bolodechocolate.avif" alt="Bolo de chocolate" class="foto-produto">
+                    <img src="/assets/fotos/bolodechocolate.avif" alt="Bolo de chocolate" class="foto-produto">
                     <div class="info">
                         <p class="produto-nome">Bolo de Chocolate</p>
                         <div class="quantidade-controles">
@@ -96,7 +98,7 @@
                 </div>
 
                 <div class="produto" data-nome="Café com Leite" data-preco="2.00" data-imagem="/fotos/cafecomleite.jpeg">
-                    <img src="/fotos/cafecomleite.jpeg" alt="Café com leite" class="foto-produto">
+                    <img src="/assets/fotos/cafecomleite.jpeg" alt="Café com leite" class="foto-produto">
                     <div class="info">
                         <p class="produto-nome">Café com Leite</p>
                         <div class="quantidade-controles">
@@ -108,9 +110,9 @@
                         <button class="btn-remover">Remover</button>
                     </div>
                 </div>
-            
+
                 <div class="produto" data-nome="Suco de Laranja" data-preco="4.00" data-imagem="/fotos/sucodelaranja.png">
-                    <img src="/fotos/sucodelaranja.png" alt="Suco de laranja" class="foto-produto">
+                    <img src="/assets/fotos/sucodelaranja.png" alt="Suco de laranja" class="foto-produto">
                     <div class="info">
                         <p class="produto-nome">Suco de Laranja</p>
                         <div class="quantidade-controles">
@@ -122,9 +124,9 @@
                         <button class="btn-remover">Remover</button>
                     </div>
                 </div>
-            
+
                 <div class="produto" data-nome="Croissant de Queijo" data-preco="6.50" data-imagem="/fotos/queijo.webp">
-                    <img src="/fotos/queijo.webp" alt="Croissant de Queijo" class="foto-produto">
+                    <img src="/assets/fotos/queijo.webp" alt="Croissant de Queijo" class="foto-produto">
                     <div class="info">
                         <p class="produto-nome">Croissant de Queijo</p>
                         <div class="quantidade-controles">
@@ -155,7 +157,7 @@
                     <p>Frete: <span id="valor-frete">R$ 0,00</span></p>
                     <p class="total">Total: <span id="total-valor">R$ 0,00</span></p>
                 </div>
-                
+
                 <div class="botoes-carrinho">
                     <a href="/index.html" class="btn-continuar">Continuar Comprando</a>
                     <button id="btn-finalizar" class="btn-finalizar-compra">Finalizar Compra</button>
@@ -165,26 +167,27 @@
 
         <p id="carrinho-vazio" class="carrinho-vazio" style="display:none;">Seu carrinho está vazio.</p>
 
-            <div id="carrinho-vazio" class="carrinho-vazio" style="display:none;">
-                        <p>Seu carrinho está vazio.</p>
-                        <h4>Que tal adicionar alguns produtos?</h4>
-                    <div class="busca-produtos-container">
-                        <input type="text" id="filtro-produtos" placeholder="Buscar por nome do produto...">
-                    <div id="lista-produtos-filtro" class="lista-produtos-sugestao">
+        <div id="carrinho-vazio" class="carrinho-vazio" style="display:none;">
+            <p>Seu carrinho está vazio.</p>
+            <h4>Que tal adicionar alguns produtos?</h4>
+            <div class="busca-produtos-container">
+                <input type="text" id="filtro-produtos" placeholder="Buscar por nome do produto...">
+                <div id="lista-produtos-filtro" class="lista-produtos-sugestao">
+                </div>
             </div>
         </div>
-</div>
     </main>
 
- <footer class="rodape">
-    <div>
-        <p>© 2025 Padaria Fantasia. Todos os direitos reservados.</p>
-        <p>Desenvolvido por <strong>Rhaissa Albuquerque</strong></p>
-    </div>
-</footer>
+    <footer class="rodape">
+        <div>
+            <p>© 2025 Padaria Fantasia. Todos os direitos reservados.</p>
+            <p>Desenvolvido por <strong>Rhaissa Albuquerque</strong></p>
+        </div>
+    </footer>
 
-    
-    <script src="/assets/index-carrinho.js"></script>
+
+    <script src="/assets/js/index-carrinho.js"></script>
 
 </body>
+
 </html>
