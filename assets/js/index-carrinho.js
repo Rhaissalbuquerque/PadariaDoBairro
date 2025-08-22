@@ -276,6 +276,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-    // ... (aqui entram outras lógicas globais ou de outras páginas, como a do formulário de contato, etc.)
+    
 
 });
+
+// =======================================================
+    // LÓGICA DO CONTADOR DE CARACTERES (SÓ PARA A PÁGINA DE CONTATO)
+    // =======================================================
+    const textareaMensagem = document.getElementById('mensagem');
+    // Usando o ID que está no seu HTML de contato
+    const contador = document.getElementById('contador-caracteres');
+    const limiteCaracteres = 1000;
+
+    if (textareaMensagem && contador) {
+        contador.textContent = `${textareaMensagem.value.length} / ${limiteCaracteres}`;
+        textareaMensagem.addEventListener('input', () => {
+            const contagemAtual = textareaMensagem.value.length;
+            contador.textContent = `${contagemAtual} / ${limiteCaracteres}`;
+            if (contagemAtual > limiteCaracteres) {
+                contador.style.color = 'red';
+            } else {
+                contador.style.color = '';
+            }
+        });
+    }
